@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 
+import { Redirect, Link, Route,Switch } from 'react-router-dom';
 import WorkoutCard from './WorkoutCard';
 
-// include back again if needed
-// import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Table } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 
 // mocks
@@ -165,8 +164,35 @@ function App() {
           <div className="float-right"><button type="button" className="btn btn-primary">Novo treino</button></div>
         </div>
       </footer> */}
+
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path="/plans" component={Plans} />
+        <Route path="/sessions" component={Sessions} />
+      </Switch>
     </div >
   );
 }
+
+//Home component
+const Home = (props) => (
+  <div>
+    <h2>Home {console.log(props)}</h2>
+  </div>
+)
+
+//Home component
+const Plans = (props) => (
+  <div>
+    <h2>Rui Felgueiras {console.log(props)}</h2>
+  </div>
+)
+
+//Home component
+const Sessions = (props) => (
+  <div>
+    <h2>Rui Felgueiras {console.log(props)}</h2>
+  </div>
+)
 
 export default App;
