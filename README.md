@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Folders structure pattern inspired [here](http://polarcape.com/choosing-the-best-folder-structure-for-your-react-application-filip-panoski/) - small applications.
+
 ## Available Scripts
 
 In the project directory, you can run:
