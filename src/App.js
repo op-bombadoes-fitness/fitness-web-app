@@ -30,9 +30,24 @@ const sessionsList = [
 function App() {
   return (
     <div className="App bg-light">
-      <div className="d-flex flex-column flex-md-row p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      {/* <div className="d-flex flex-column flex-md-row p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 className="my-0 mr-md-auto font-weight-normal"><b>Fitness App</b> by op-bombadoes</h5>
-      </div>
+      </div> */}
+
+      {/* <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" />
+        </a>
+      </nav> */}
+
+      <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <a className="navbar-brand" href="#"><b>Fitness App</b> by op-bombadoes</a>
+      </nav>
+
+      <main>
+
+      </main>
+
 
       {/* TODO: create greeting componente? */}
       <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
@@ -147,11 +162,11 @@ function App() {
           })}
         </div>
       </div> */}
-      {/* <footer className="footer">
+      <footer className="footer">
         <div className="container">
-          <div className="float-right"><button type="button" className="btn btn-primary">Novo treino</button></div>
+          {/* <div className="float-right"><button type="button" className="btn btn-primary">Novo treino</button></div> */}
         </div>
-      </footer> */}
+      </footer>
 
       <Switch>
         <Route exact path='/' component={Home} />
