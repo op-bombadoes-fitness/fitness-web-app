@@ -1,13 +1,27 @@
 import React from 'react';
 import './App.css';
 
-import { Redirect, Link, Route,Switch } from 'react-router-dom';
+import { Redirect, Link, Route, Switch } from 'react-router-dom';
+
+import Home from './pages/Home.js';
+import Plans from './pages/Plans.js';
+import Sessions from './pages/Sessions.js';
+
 import WorkoutCard from './WorkoutCard';
 
 import { Dropdown } from 'react-bootstrap';
 
-// mocks
-const workoutsList = [
+// adicionar aqui os mocks
+const plansList = [
+  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] }
+];
+
+const sessionsList = [
   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
@@ -23,33 +37,12 @@ function App() {
         <h5 className="my-0 mr-md-auto font-weight-normal"><b>Fitness App</b> by op-bombadoes</h5>
       </div>
 
+      {/* TODO: create greeting componente? */}
       <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
 
-      <div className="container-fluid">
-        <span>Ainda não tens um plano de treino!</span>
-        <span>Criar plano</span>
-      </div>
+      {/* <Home /> */}
 
-      <hr className="mb-4" />
-      <div className="container-fluid">
-        <h4 className="mb-3">Os teus planos de treino</h4>
-        <div className="row">
-          <div className="col-md-4" >
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Costas Biceps Abdominais</h5>
-                <ul className="list-unstyled mt-3 mb-4">
-                  <li>3 X Dumbbell bench press</li>
-                  <li>3 X Flexoes</li>
-                </ul>
-                <a href="#" className="btn btn-sm btn-primary">Começar!</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr className="mb-4" />
+      {/* <hr className="mb-4" />
       <div className="container-fluid">
         <h4 className="mb-3">Costas Biceps Abdominais</h4>
         <form className="needs-validation">
@@ -151,7 +144,7 @@ function App() {
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
       {/* <div className="container">
         <div className="row">
           {workoutsList.map(function (workout, index) {
@@ -173,26 +166,5 @@ function App() {
     </div >
   );
 }
-
-//Home component
-const Home = (props) => (
-  <div>
-    <h2>Home {console.log(props)}</h2>
-  </div>
-)
-
-//Home component
-const Plans = (props) => (
-  <div>
-    <h2>Rui Felgueiras {console.log(props)}</h2>
-  </div>
-)
-
-//Home component
-const Sessions = (props) => (
-  <div>
-    <h2>Rui Felgueiras {console.log(props)}</h2>
-  </div>
-)
 
 export default App;
