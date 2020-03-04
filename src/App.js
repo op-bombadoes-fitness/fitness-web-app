@@ -12,14 +12,11 @@ import WorkoutCard from './WorkoutCard';
 import { Dropdown } from 'react-bootstrap';
 
 // adicionar aqui os mocks
-const plansList = [
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] }
-];
+// const plansList = [
+//   { name: "Peito Biceps Abdominais", exercises: ["3 x Aberturas (deitado no banco)", "3 x Curl biceps puxador", "3 x abdominais"] },
+//   { name: "Costas Triceps Abdominais", exercises: ["3 x Puxadora ao peito (pega larga)", "3 x Triceps (deitado no banco) com halter", "3 x abdominais"] },
+//   { name: "Pernas", exercises: ["3 x Deadlift", "3 x Kettlebell squat", "3 x Agachamento com barra"] }
+// ];
 
 const sessionsList = [
   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
@@ -39,8 +36,6 @@ function App() {
 
       {/* TODO: create greeting componente? */}
       <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
-
-      {/* <Home /> */}
 
       {/* <hr className="mb-4" />
       <div className="container-fluid">
