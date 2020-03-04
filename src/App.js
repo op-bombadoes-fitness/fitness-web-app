@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Redirect, NavLink, Route, Switch } from 'react-router-dom';
+import { Redirect, NavLink, Route, Switch, Link } from 'react-router-dom';
 
 import Home from './pages/Home.js';
 import Plans from './pages/Plans.js';
@@ -39,17 +39,23 @@ function App() {
       </nav> */}
 
       <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
-        <NavLink className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</NavLink>
+        <Link className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</Link>
         {/* <a className="navbar-brand" href="#"><b>Fitness App</b> by op-bombadoes</a> */}
       </nav>
 
       <main>
-
+        {/* TODO: create greeting componente? */}
+        <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path="/plans" component={Plans} />
+          <Route path="/sessions" component={Sessions} />
+        </Switch>
       </main>
 
 
-      {/* TODO: create greeting componente? */}
-      <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
+
+
 
       {/* <hr className="mb-4" />
       <div className="container-fluid">
@@ -166,12 +172,6 @@ function App() {
           {/* <div className="float-right"><button type="button" className="btn btn-primary">Novo treino</button></div> */}
         </div>
       </footer>
-
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path="/plans" component={Plans} />
-        <Route path="/sessions" component={Sessions} />
-      </Switch>
     </div >
   );
 }

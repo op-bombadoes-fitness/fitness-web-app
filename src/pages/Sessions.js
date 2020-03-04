@@ -27,6 +27,7 @@ class Sessions extends React.Component {
                         </tr>
                     </tbody>
                 </table>
+                <button type="button" className="btn btn-outline-primary btn-sm btn-block">Ver todas as sessões</button>
             </div>
         );
     }

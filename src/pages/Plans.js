@@ -26,10 +26,11 @@ function WithPlans(props) {
             <div className="row">
                 <div className="col-md-4 mb-2" >
                     {plansList.map(function (plan, index) {
-                        return <PlanCard name={plan.name} muscles={plan.exercises} />;
+                        return <PlanCard name={plan.name} muscles={plan.exercises} key={index} />;
                     })}
                 </div>
             </div>
+            <button type="button" className="btn btn-outline-primary btn-sm btn-block">Ver todos os planos</button>
         </div>
     );
 }
