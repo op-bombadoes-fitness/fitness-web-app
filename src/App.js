@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
 
-import { Redirect, Link, Route, Switch } from 'react-router-dom';
+import { Redirect, NavLink, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home.js';
 import Plans from './pages/Plans.js';
 import Sessions from './pages/Sessions.js';
-
-import WorkoutCard from './WorkoutCard';
 
 import { Dropdown } from 'react-bootstrap';
 
@@ -41,7 +39,8 @@ function App() {
       </nav> */}
 
       <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
-        <a className="navbar-brand" href="#"><b>Fitness App</b> by op-bombadoes</a>
+        <NavLink className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</NavLink>
+        {/* <a className="navbar-brand" href="#"><b>Fitness App</b> by op-bombadoes</a> */}
       </nav>
 
       <main>
