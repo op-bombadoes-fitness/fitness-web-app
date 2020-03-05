@@ -32,7 +32,7 @@ function App() {
         <Link className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</Link>
       </nav>
 
-      <main>
+      <main className="pt-5">
 
         {/* TODO: create greeting componente? */}
         <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
