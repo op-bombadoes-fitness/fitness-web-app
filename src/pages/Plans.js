@@ -2,6 +2,8 @@ import React from 'react';
 
 import PlanCard from '../components/PlanCard.js'
 
+import { Link } from 'react-router-dom';
+
 // adicionar aqui os mocks
 const plansList = [
     { name: "Peito Biceps Abdominais", exercises: ["3 x Aberturas (deitado no banco)", "3 x Curl biceps puxador", "3 x abdominais"] },
@@ -30,7 +32,8 @@ function WithPlans(props) {
                     })}
                 </div>
             </div>
-            <button type="button" className="btn btn-outline-primary btn-sm btn-block">Ver todos os planos</button>
+            {/* <button type="button" className="btn btn-outline-primary btn-sm btn-block">Ver todos os planos</button> */}
+            <Link className="btn btn-outline-primary btn-sm btn-block" type="button" to="/plans">Ver todos os planos</Link>
         </div>
     );
 }

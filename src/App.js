@@ -40,10 +40,10 @@ function App() {
 
       <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <Link className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</Link>
-        {/* <a className="navbar-brand" href="#"><b>Fitness App</b> by op-bombadoes</a> */}
       </nav>
 
       <main>
+        
         {/* TODO: create greeting componente? */}
         <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
         <Switch>
@@ -52,10 +52,6 @@ function App() {
           <Route path="/sessions" component={Sessions} />
         </Switch>
       </main>
-
-
-
-
 
       {/* <hr className="mb-4" />
       <div className="container-fluid">
