@@ -38,7 +38,7 @@ function App() {
         </a>
       </nav> */}
 
-      <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <nav className="navbar navbar-light fixed-top bg-light">
         <Link className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</Link>
       </nav>
 

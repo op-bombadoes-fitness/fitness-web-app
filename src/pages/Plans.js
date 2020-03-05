@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 
 // adicionar aqui os mocks
 const plansList = [
-    { name: "Peito Biceps Abdominais", exercises: ["3 x Aberturas (deitado no banco)", "3 x Curl biceps puxador", "3 x abdominais"] },
-    { name: "Costas Triceps Abdominais", exercises: ["3 x Puxadora ao peito (pega larga)", "3 x Triceps (deitado no banco) com halter", "3 x abdominais"] },
-    { name: "Pernas", exercises: ["3 x Deadlift", "3 x Kettlebell squat", "3 x Agachamento com barra"] }
+    { id: "1", name: "Peito Biceps Abdominais", exercises: ["3 x Aberturas (deitado no banco)", "3 x Curl biceps puxador", "3 x abdominais"] },
+    { id: "2", name: "Costas Triceps Abdominais", exercises: ["3 x Puxadora ao peito (pega larga)", "3 x Triceps (deitado no banco) com halter", "3 x abdominais"] },
+    { id: "3", name: "Pernas", exercises: ["3 x Deadlift", "3 x Kettlebell squat", "3 x Agachamento com barra"] }
 ];
 
 function NoPlans() {
@@ -28,7 +28,7 @@ function WithPlans(props) {
             <div className="row">
                 <div className="col-md-4 mb-2" >
                     {plansList.map(function (plan, index) {
-                        return <PlanCard name={plan.name} muscles={plan.exercises} key={index} />;
+                        return <PlanCard name={plan.name} muscles={plan.exercises} id={plan.id} key={index} />;
                     })}
                 </div>
             </div>
