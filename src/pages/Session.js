@@ -1,36 +1,71 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { Dropdown } from 'react-bootstrap';
+import Exercise from '../components/Exercise.js';
 
 // adicionar aqui os mocks
-const session =
+const sessionObject =
 {
     id: "1",
     name: "Peito Biceps Abdominais",
-    exercises: ["3 x Aberturas (deitado no banco)", "3 x Curl biceps puxador", "3 x abdominais"]
+    exercises: [
+        {
+            name: "Aberturas (deitado no banco)",
+            numberOfRepetitions: 3,
+            repetitions: [
+                { index: 1, weight: "10" },
+                { index: 2, weight: "15" },
+                { index: 3, weight: "20" },
+            ]
+        },
+        {
+            name: "Curl biceps puxador",
+            numberOfRepetitions: 3,
+            repetitions: [
+                { index: 1, weight: "10" },
+                { index: 2, weight: "15" },
+                { index: 3, weight: "20" },
+            ]
+        },
+        {
+            name: "Abdominais",
+            numberOfRepetitions: 3,
+            repetitions: [
+                { index: 1, weight: "0" },
+                { index: 2, weight: "0" },
+                { index: 3, weight: "0" },
+            ]
+        }
+    ]
 };
 
 class Session extends React.Component {
     constructor(props) {
         super(props);
-        // this.sayHello = this.sayHello.bind(this);
     }
 
     render() {
-        const { match } = this.props // coming from React Router.
+        // const { match } = this.props // coming from React Router.
 
-        console.log(match.path) // /topics/:topicId/:subId
+        // console.log(match.path) // /topics/:topicId/:subId
 
-        console.log(match.url) // /topics/react-router/url-parameters
-        
+        // console.log(match.url) // /topics/react-router/url-parameters
+
         return (
             <div className="container-fluid">
-                <h4 className="mb-3">Costas Biceps Abdominais</h4>
+                <h4 className="mb-3">{sessionObject.name}</h4>
                 <form className="needs-validation">
                     <ul className="list-group mb-3">
-                        <li className="list-group-item d-flex justify-content-between lh-condensed">
+                        {sessionObject.exercises.map(function (exercise, index) {
+                            return <Exercise name={exercise.name}
+                                numberOfRepetitions={exercise.numberOfRepetitions}
+                                repetitions={exercise.repetitions}
+                                key={index} />;
+                        })}
+
+                        {/* <li className="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
                                 <h6 className="my-0">Dumbbell bench press</h6>
                                 <small className="text-muted">3 repetições</small>
@@ -96,7 +131,7 @@ class Session extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
                     <button className="btn btn-primary btn-block" type="submit">Terminar treino</button>
                 </form>
