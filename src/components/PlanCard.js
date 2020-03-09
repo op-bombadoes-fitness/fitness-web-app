@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory, withRouter } from "react-router-dom";
 
 class PlanCard extends React.Component {
 
@@ -9,6 +10,11 @@ class PlanCard extends React.Component {
 
     sayHello(id) {
         alert(id);
+        // this.props.history.push('/');
+
+        let path = '/';
+        let history = useHistory();
+        // history.push(path);
     }
 
     render() {
@@ -28,4 +34,4 @@ class PlanCard extends React.Component {
     }
 }
 
-export default PlanCard;
+export default withRouter(PlanCard);

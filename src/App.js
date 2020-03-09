@@ -6,8 +6,7 @@ import { Redirect, NavLink, Route, Switch, Link } from 'react-router-dom';
 import Home from './pages/Home.js';
 import Plans from './pages/Plans.js';
 import Sessions from './pages/Sessions.js';
-
-import { Dropdown } from 'react-bootstrap';
+import Session from './pages/Session.js';
 
 // adicionar aqui os mocks
 // const plansList = [
@@ -39,12 +38,13 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path="/plans" component={Plans} />
-          <Route path="/sessions" component={Sessions} />
+          {/* <Route path="/sessions" component={Sessions} /> */}
+          <Route path="/sessions/:sessionId" component={Session}/>
         </Switch>
       </main>
 
       <footer className="footer">
-        <div class="text-center py-3">© 2020 Copyright: <a href="#">op-bombadoes</a>
+        <div className="text-center py-3">© 2020 Copyright: <a href="#">op-bombadoes</a>
         </div>
       </footer>
 

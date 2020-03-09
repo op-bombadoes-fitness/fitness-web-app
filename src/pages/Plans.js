@@ -32,7 +32,6 @@ function WithPlans(props) {
                     })}
                 </div>
             </div>
-            {/* <button type="button" className="btn btn-outline-primary btn-sm btn-block">Ver todos os planos</button> */}
             <Link className="btn btn-outline-primary btn-sm btn-block" type="button" to="/plans">Ver todos os planos</Link>
         </div>
     );
