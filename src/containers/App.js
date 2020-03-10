@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 
 import { Redirect, NavLink, Route, Switch, Link } from 'react-router-dom';
 
-import Home from './pages/Home.js';
-import Plans from './pages/Plans.js';
-import Sessions from './pages/Sessions.js';
-import Session from './pages/Session.js';
+import Home from '../pages/Home.js';
+import Plans from '../pages/Plans.js';
+import Sessions from '../pages/Sessions.js';
+import Session from '../pages/Session.js';
 
 // adicionar aqui os mocks
 // const plansList = [
@@ -15,38 +15,29 @@ import Session from './pages/Session.js';
 //   { name: "Pernas", exercises: ["3 x Deadlift", "3 x Kettlebell squat", "3 x Agachamento com barra"] }
 // ];
 
-const sessionsList = [
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
-  { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] }
-];
+// const sessionsList = [
+//   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+//   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+//   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+//   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+//   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] },
+//   { date: "18/01/2020", muscles: ["costas", "biceps", "abdominais"] }
+// ];
 
 function App() {
   return (
     <div className="App bg-light">
-      <nav className="navbar navbar-light fixed-top bg-light">
-        <Link className="navbar-brand" to="/"><b>Fitness App</b> by op-bombadoes</Link>
-      </nav>
-
       <main className="pt-5">
-
         {/* TODO: create greeting componente? */}
         <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
-        <Switch>
+
+        {/* <Switch>
           <Route exact path='/' component={Home} />
           <Route path="/plans" component={Plans} />
-          {/* <Route path="/sessions" component={Sessions} /> */}
+          <Route path="/sessions" component={Sessions} />
           <Route path="/sessions/:sessionId" component={Session}/>
-        </Switch>
+        </Switch> */}
       </main>
-
-      <footer className="footer">
-        <div className="text-center py-3">© 2020 Copyright: <a href="#">op-bombadoes</a>
-        </div>
-      </footer>
 
       {/* <div className="container">
         <div className="row">

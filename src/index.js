@@ -1,15 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import { createLogger } from 'redux-logger'
+import thunk from 'redux-thunk'
+import reducer from './reducers'
+import { getAllPlans } from './actions'
+import App from './containers/App'
+import Nav from './containers/Nav'
+import Footer from './containers/Footer'
+
 import './index.css';
-import App from './App';
-
-import { BrowserRouter } from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.css';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
-    , document.getElementById('root'));
+// import { BrowserRouter } from 'react-router-dom';
+
+const middleware = [ thunk ];
+if (process.env.NODE_ENV !== 'production') {
+  middleware.push(createLogger());
+}
+
+const store = createStore(
+  reducer,
+  applyMiddleware(...middleware)
+)
+
+store.dispatch(getAllPlans())
+
+render(
+  <Provider store={store}>
+    <Nav />
+    <App />
+    <Footer />
+  </Provider>,
+  document.getElementById('root')
+)
+
+// ReactDOM.render(
+//     // <BrowserRouter>
+//         <App />
+//     // </BrowserRouter>
+//     , document.getElementById('root'));

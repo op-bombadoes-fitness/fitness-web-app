@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Peito Biceps Abdominais",
+        "exercises": [
+            "3 x Aberturas (deitado no banco)",
+            "3 x Curl biceps puxador",
+            "3 x abdominais"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Costas Triceps Abdominais",
+        "exercises": [
+            "3 x Puxadora ao peito (pega larga)",
+            "3 x Triceps (deitado no banco) com halter",
+            "3 x abdominais"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Pernas",
+        "exercises": [
+            "3 x Deadlift",
+            "3 x Kettlebell squat",
+            "3 x Agachamento com barra"
+        ]
+    }
+]
