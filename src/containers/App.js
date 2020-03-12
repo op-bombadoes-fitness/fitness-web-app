@@ -8,6 +8,8 @@ import Plans from '../pages/Plans.js';
 import Sessions from '../pages/Sessions.js';
 import Session from '../pages/Session.js';
 
+import PlansContainer from '../containers/PlansContainer'
+
 // adicionar aqui os mocks
 // const plansList = [
 //   { name: "Peito Biceps Abdominais", exercises: ["3 x Aberturas (deitado no banco)", "3 x Curl biceps puxador", "3 x abdominais"] },
@@ -28,8 +30,8 @@ function App() {
   return (
     <div className="App bg-light">
       <main className="pt-5">
-        {/* TODO: create greeting componente? */}
         <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
+        <PlansContainer />
 
         {/* <Switch>
           <Route exact path='/' component={Home} />
@@ -38,15 +40,6 @@ function App() {
           <Route path="/sessions/:sessionId" component={Session}/>
         </Switch> */}
       </main>
-
-      {/* <div className="container">
-        <div className="row">
-          {workoutsList.map(function (workout, index) {
-            return <WorkoutCard date={workout.date} muscles={workout.muscles} />;
-          })}
-        </div>
-      </div> */}
-
     </div>
   );
 }

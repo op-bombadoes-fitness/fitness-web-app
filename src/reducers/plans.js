@@ -4,70 +4,32 @@ import { RECEIVE_PLANS } from '../constants/ActionTypes'
 const plans = (state = [], action) => {
     switch (action.type) {
         case RECEIVE_PLANS:
-            return {
-                ...state,
-                ...action.plans.reduce((obj, plan) => {
-                    obj[plan.id] = plan
-                    return obj
-                }, {})
-            }
+            // let plans = state.plans
+            // plans = action.plans
+
+            // return {
+            //     ...state,
+            //     plans
+            // }
+
+            // return Object.assign({}, state, {
+            //     plans: [
+            //         ...state.plans
+            //     ]
+            // })
+
+            return action.plans.map(plan => plan)
+
+        // return Object.assign({}, state, {
+        //     plans: action.plans
+        // })
         default:
             return state
     }
 }
 
+export const getActivePlans = state =>
+    state.plans
+
 export default plans
 
-// const plans = (state, action) => {
-//     switch (action.type) {
-//         // case ADD_TO_CART:
-//         //   return {
-//         //     ...state,
-//         //     inventory: state.inventory - 1
-//         //   }
-//         default:
-//             return state
-//     }
-// }
-
-// const byId = (state = {}, action) => {
-//     switch (action.type) {
-//         case RECEIVE_PLANS:
-//             return {
-//                 ...state,
-//                 ...action.plans.reduce((obj, plan) => {
-//                     obj[plan.id] = plan
-//                     return obj
-//                 }, {})
-//             }
-//         default:
-//             const { productId } = action
-//             if (productId) {
-//                 return {
-//                     ...state,
-//                     [productId]: plans(state[productId], action)
-//                 }
-//             }
-//             return state
-//     }
-// }
-
-// const visibleIds = (state = [], action) => {
-//     switch (action.type) {
-//         case RECEIVE_PRODUCTS:
-//             return action.products.map(product => product.id)
-//         default:
-//             return state
-//     }
-// }
-
-// export default combineReducers({
-//     byId
-//     // visibleIds
-// })
-
-// export const getPlan = (state, id) =>
-//     state.byId[id]
-
-// export const getVisibleProducts = state =>
-//     state.visibleIds.map(id => getProduct(state, id))
