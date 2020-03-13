@@ -3,12 +3,14 @@ import './styles/App.css';
 
 import { Redirect, NavLink, Route, Switch, Link } from 'react-router-dom';
 
-import Home from '../pages/Home.js';
-import Plans from '../pages/Plans.js';
-import Sessions from '../pages/Sessions.js';
-import Session from '../pages/Session.js';
+// import Home from '../pages/Home.js';
+// import Plans from '../pages/Plans.js';
+// import Sessions from '../pages/Sessions.js';
+// import Session from '../pages/Session.js';
 
 import PlansContainer from '../containers/PlansContainer'
+import SessionsContainer from '../containers/SessionsContainer'
+import ContainerSeparator from '../components/ContainerSeparator'
 
 // adicionar aqui os mocks
 // const plansList = [
@@ -32,6 +34,8 @@ function App() {
       <main className="pt-5">
         <div className="container-fluid"><h3>Bom dia, Rui!</h3></div>
         <PlansContainer />
+        <ContainerSeparator />
+        <SessionsContainer />
 
         {/* <Switch>
           <Route exact path='/' component={Home} />
