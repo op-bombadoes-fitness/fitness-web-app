@@ -12,6 +12,17 @@ export const getAllPlans = () => dispatch => {
     })
 }
 
+const receiveSessions = sessions => ({
+    type: types.RECEIVE_SESSIONS,
+    sessions
+})
+
+export const getAllSessions = () => dispatch => {
+    train.getAllSessions(sessions => {
+        dispatch(receiveSessions(sessions))
+    })
+}
+
 // const addToCartUnsafe = productId => ({
 //   type: types.ADD_TO_CART,
 //   productId

@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 // import cart, * as fromCart from './cart'
 import plans, * as fromPlans from './plans'
+import sessions, * as fromSessions from './sessions'
 
 export default combineReducers({
-  plans
+  plans,
+  sessions
 })
 
 // const getAddedIds = state => fromCart.getAddedIds(state.cart)

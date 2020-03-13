@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 import reducer from './reducers'
-import { getAllPlans } from './actions'
+import { getAllPlans, getAllSessions } from './actions'
 import App from './containers/App'
 import Nav from './containers/Nav'
 import Footer from './containers/Footer'
@@ -26,6 +26,7 @@ const store = createStore(
 )
 
 store.dispatch(getAllPlans())
+store.dispatch(getAllSessions())
 
 render(
   <Provider store={store}>
