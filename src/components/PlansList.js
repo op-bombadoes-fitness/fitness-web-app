@@ -10,8 +10,8 @@ import Plan from '../components/Plan'
 const PlansList = ({ plans }) => {
     const hasPlans = plans.length > 0
     const plansRender = hasPlans ? (
-        plans.map(plan =>
-            <Plan name={plan.name} muscles={plan.exercises} id={plan.id} />
+        plans.map((plan, key) =>
+            <Plan name={plan.name} muscles={plan.exercises} id={plan.id} key={key} />
         )
     ) : (
             <div className="container-fluid">
@@ -30,7 +30,7 @@ const PlansList = ({ plans }) => {
                         {plansRender}
                     </div>
                 </div>
-                {/* <Link className="btn btn-outline-primary btn-sm btn-block" type="button" to="/plans">Ver todos os planos</Link> */}
+                <button type="button" className="btn btn-primary btn-block">Ver todos os planos</button>
             </div>
         )
     }
